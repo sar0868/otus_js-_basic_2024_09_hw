@@ -1,6 +1,5 @@
 const elInput = document.querySelector(".inputText");
 const button = document.querySelector("#button");
-const divBox = document.querySelector(".text");
 
 button.hidden = true;
 elInput.oninput = function () {
@@ -9,8 +8,9 @@ elInput.oninput = function () {
 };
 
 function buttonClick() {
-  if (divBox.childElementCount == 4) {
-    divBox.removeChild(divBox.firstChild);
+  const divBox = document.querySelector(".text");
+  if (divBox.childElementCount == 5) {
+    divBox.removeChild(document.querySelector(".text p"));
   }
   addElement(newText);
   clearInput();
@@ -18,6 +18,7 @@ function buttonClick() {
 }
 
 function addElement(text) {
+  const divBox = document.querySelector(".text");
   const newEl = document.createElement("p");
   newEl.innerText = text;
   divBox.append(newEl);
@@ -27,7 +28,4 @@ function clearInput() {
   elInput.value = "";
 }
 
-// function afterInputText() {
-//   newText = elInput.value;
-//   button.hidden = false;
-// }
+button.addEventListener("click", buttonClick);
