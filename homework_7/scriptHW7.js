@@ -10,7 +10,7 @@ elInput.oninput = function () {
 function buttonClick() {
   const divBox = document.querySelector(".text");
   if (divBox.childElementCount == 5) {
-    divBox.removeChild(document.querySelector(".text p"));
+    divBox.removeChild(document.querySelector(".text :first-Child"));
   }
   addElement(newText);
   clearInput();
