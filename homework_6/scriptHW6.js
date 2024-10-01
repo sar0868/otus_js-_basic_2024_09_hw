@@ -5,8 +5,7 @@ function diff(num1, num2) {
 
 function isWord(text) {
   let regexp = new RegExp("[^\\w+]");
-  let result = text.match(regexp);
-  return result == null;
+  return !regexp.test(text);
 }
 
 function pow(a, x) {
@@ -16,3 +15,7 @@ function pow(a, x) {
   }
   return result;
 }
+
+console.log(isWord(" .,"));
+console.log(isWord("hello"));
+console.log(isWord("hello wiu"));
