@@ -19,3 +19,5 @@ function pow(a, x) {
 console.log(isWord(" .,"));
 console.log(isWord("hello"));
 console.log(isWord("hello wiu"));
+
+module.exports = { diff, isWord, pow };
