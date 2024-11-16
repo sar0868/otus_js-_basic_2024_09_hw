@@ -4,8 +4,12 @@ function diff(num1, num2) {
 }
 
 function isWord(text) {
-  let regexp = new RegExp("[^\\w+]");
-  return !regexp.test(text);
+  if (text.length === 0) {
+    return false;
+  }
+  let regexp = /\W+/;
+  const arr = text.split(regexp);
+  return arr.length === 1;
 }
 
 function pow(a, x) {
@@ -19,5 +23,6 @@ function pow(a, x) {
 console.log(isWord(" .,"));
 console.log(isWord("hello"));
 console.log(isWord("hello wiu"));
+console.log(isWord("h.ll"));
 
 module.exports = { diff, isWord, pow };
