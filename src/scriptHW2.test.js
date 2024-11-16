@@ -1,6 +1,8 @@
 import { max, getMonth, isCircleIntoSquare } from "./scriptHW2";
 
+const logSpy = jest.spyOn(console, "log");
 describe("tests hw2", () => {
+  afterEach(() => jest.clearAllMocks());
   describe("max is tow numbers", () => {
     it.each([
       { num1: 2, num2: 1, expected: 2 },
@@ -14,6 +16,11 @@ describe("tests hw2", () => {
         expect(result).toBe(expected);
       }
     );
+    it("should call console.log", () => {
+      max(1, 2);
+
+      expect(logSpy).toHaveBeenCalled();
+    });
   });
 
   describe("get title month by number", () => {
@@ -25,6 +32,12 @@ describe("tests hw2", () => {
       const result = getMonth(num1);
 
       expect(result).toBe(expected);
+    });
+
+    it("should call console.log", () => {
+      getMonth(13);
+
+      expect(logSpy).toHaveBeenCalled();
     });
   });
 

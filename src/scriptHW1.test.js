@@ -1,6 +1,9 @@
 import { sum, mult, totalChar, sumNumbers } from "./scriptHW1";
 
+const logSpy = jest.spyOn(console, "log");
+
 describe("tests hw01", () => {
+  afterEach(() => jest.clearAllMocks());
   describe("tests sum numbers", () => {
     it.each([
       { inputA: 2, inputB: 3, expected: 5 },
@@ -15,6 +18,12 @@ describe("tests hw01", () => {
         expect(result).toBe(expected);
       }
     );
+
+    it("should call console.log", () => {
+      sum(1, 0);
+
+      expect(logSpy).toHaveBeenCalled();
+    });
   });
 
   describe("tests mult numbers", () => {
@@ -31,6 +40,12 @@ describe("tests hw01", () => {
         expect(result).toBe(expected);
       }
     );
+
+    it("should call console.log", () => {
+      mult(1, 0);
+
+      expect(logSpy).toHaveBeenCalled();
+    });
   });
 
   describe("tests totalChar", () => {
@@ -47,6 +62,11 @@ describe("tests hw01", () => {
         expect(result).toBe(expected);
       }
     );
+    it("should call console.log", () => {
+      totalChar("a", "");
+
+      expect(logSpy).toHaveBeenCalled();
+    });
   });
 
   describe("tests sumNumbers", () => {
@@ -62,5 +82,10 @@ describe("tests hw01", () => {
         expect(result).toBe(expected);
       }
     );
+    it("should call console.log", () => {
+      sumNumbers(123);
+
+      expect(logSpy).toHaveBeenCalled();
+    });
   });
 });
