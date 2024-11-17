@@ -34,3 +34,5 @@ function clearInput() {
 }
 
 button.addEventListener("click", buttonClick);
+
+module.exports = { button, buttonClick, addElement };
