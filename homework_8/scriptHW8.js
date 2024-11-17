@@ -7,40 +7,56 @@ function createDate(inputStr) {
 
 function week(day) {
   const week = [
+    "Воскресенье",
     "Понедельник",
     "Вторник",
     "Среда",
     "Четверг",
     "Пятница",
     "Суббота",
-    "Воскресенье",
+    ,
   ];
-  return week[day - 1];
+  return week[day];
 }
 
-const inputDate = prompt("Input date ДД.ММ.ГГГГ");
-const inpDate = createDate(inputDate);
+function inputDate() {
+  // const date = prompt("Input date ДД.ММ.ГГГГ");
+  return "18.11.2024";
+}
+const inpDate = createDate(inputDate());
 console.log(inputDate, week(inpDate.getDay()));
 
 // 2
+function calcMinutes(now) {
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  return hours * 60 + minutes;
+}
 const now = new Date();
-
-const hours = now.getHours();
-const minutes = now.getMinutes();
-const minPass = hours * 60 + minutes;
-console.log(`С начала сегодняшнего дня прошло ${minPass} минут.`);
+console.log(`С начала сегодняшнего дня прошло ${calcMinutes(now)} минут.`);
 
 // 3
+// const user1 = {
+//   name:
+// }
 
 const birthdayUser1 = "08.11.1968";
-const bdUser1 = createDate(birthdayUser1);
+// const bdUser1 = createDate(birthdayUser1);
 const birthdayUser2 = "09.11.1968";
-const bdUser2 = createDate(birthdayUser2);
+// const bdUser2 = createDate(birthdayUser2);
 
-if (bdUser1 < bdUser2) {
-  console.log("user2 моложе user1");
-} else if (bdUser1 > bdUser2) {
-  console.log("user1 моложе user2");
-} else {
+function getYounger(birthdayUser1, birthdayUser2) {
+  const bdUser1 = createDate(birthdayUser1);
+  const bdUser2 = createDate(birthdayUser2);
+  if (bdUser1 < bdUser2) {
+    console.log("user2 моложе user1");
+    return bdUser1;
+  } else if (bdUser1 > bdUser2) {
+    console.log("user1 моложе user2");
+    return bdUser2;
+  }
   console.log("user1 и user2 родились в один день");
+  return "user1 и user2 родились в один день";
 }
+
+module.exports = { createDate, week, getYounger, calcMinutes };
