@@ -50,13 +50,13 @@ function getYounger(birthdayUser1, birthdayUser2) {
   const bdUser2 = createDate(birthdayUser2);
   if (bdUser1 < bdUser2) {
     console.log("user2 моложе user1");
-    return bdUser1;
+    return birthdayUser1;
   } else if (bdUser1 > bdUser2) {
     console.log("user1 моложе user2");
-    return bdUser2;
+    return birthdayUser2;
   }
   console.log("user1 и user2 родились в один день");
-  return "user1 и user2 родились в один день";
+  return birthdayUser1;
 }
 
 module.exports = { createDate, week, getYounger, calcMinutes };

@@ -1,4 +1,4 @@
-import { createDate, week, calcMinutes } from "./scriptHW8";
+import { createDate, week, calcMinutes, getYounger } from "./scriptHW8";
 
 describe("tests hw 8", () => {
   describe("day of the week", () => {
@@ -25,5 +25,21 @@ describe("tests hw 8", () => {
 
       expect(result).toBe(expected);
     });
+  });
+
+  describe("compare birth dates and get younger", () => {
+    it.each([
+      { date1: "01.01.2024", date2: "02.01.2024", expected: "01.01.2024" },
+      { date1: "03.01.2024", date2: "02.01.2024", expected: "02.01.2024" },
+      { date1: "01.01.2024", date2: "01.01.2024", expected: "01.01.2024" },
+      ,
+    ])(
+      "should younger birth date $date1 and $date2: $expected",
+      ({ date1, date2, expected }) => {
+        const result = getYounger(date1, date2);
+
+        expect(result).toBe(expected);
+      }
+    );
   });
 });
