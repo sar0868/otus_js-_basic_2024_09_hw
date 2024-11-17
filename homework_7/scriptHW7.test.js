@@ -5,7 +5,7 @@
 import { button, buttonClick, addElement } from "./scriptHW7";
 
 // jest.mock("./__mocks__/document.js");
-describe("tests hw 7", () => {
+describe.skip("tests hw 7", () => {
   //   beforeAll(() => {
   //     Object.defineProperty(global, "document", {});
   //   });

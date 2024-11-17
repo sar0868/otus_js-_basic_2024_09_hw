@@ -5,11 +5,11 @@ button.hidden = true;
 elInput.oninput = function () {
   newText = elInput.value;
   button.hidden = false;
-  document.addEventListener("keyup", (event) => {
-    if (event.code === "Enter") {
-      buttonClick();
-    }
-  });
+  // document.addEventListener("keyup", (event) => {
+  //   if (event.code === "Enter") {
+  //     buttonClick();
+  //   }
+  // });
 };
 
 function buttonClick() {
