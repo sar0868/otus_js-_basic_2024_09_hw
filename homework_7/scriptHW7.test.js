@@ -1,18 +1,14 @@
 /**
  * @jest-environment jsdom
+ * @jest-environment-options {"url": "https://jestjs.io/"}
  */
+// const fs = require("fs");
+// global.window.document.html.innerHTML = fs.readFileSync("./index.html");
 
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const dom = new JSDOM(
   `
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-    </head>
     <body>
       <input
         type="text"
@@ -25,9 +21,7 @@ const dom = new JSDOM(
         <p>2</p>
         <p>3</p>
       </div>
-      <script src="./scriptHW7.js"></script>
-    </body>
-  </html>`
+    </body>`
 );
 global.document = dom.window.document;
 global.window = dom.window;
@@ -45,3 +39,5 @@ describe("tests hw 7", () => {
 
   it.todo("should count p equals 5, new p always first.");
 });
+
+// npm install -D jest-environment-jsdom
