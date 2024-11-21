@@ -12,10 +12,27 @@ export function addPararaph(el) {
   const btn = el.querySelector("button");
 
   btn.addEventListener("click", () => {
+    let text = inp.value;
     inp.value = "";
+    addElem(text);
+
+    btn.style.display = "none";
   });
 
   inp.oninput = () => {
     btn.style.display = "inline-block";
   };
+
+  addElem = (text) => {
+    const newEl = document.createElement("p");
+    newEl.innerHTML = text;
+    el.querySelector("div").prepend(newEl);
+  };
+
+  // checkCountElem = () => {
+  //   const elements = el.querySelectorAll("div p");
+  //   while (elements.length > 5) {
+  //     elements.pul;
+  //   }
+  // };
 }

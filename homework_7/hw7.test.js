@@ -31,7 +31,30 @@ describe("hw7", () => {
     const el = document.createElement("div");
     addPararaph(el);
 
+    el.querySelector("input").value = "new";
     el.querySelector("input").oninput();
     expect(el.querySelector("button").style.display).toBe("inline-block");
   });
+
+  it("add paragraph after button click", () => {
+    const el = document.createElement("div");
+    addPararaph(el);
+
+    el.querySelector("input").value = "new";
+    el.querySelector("button").click();
+    expect(el.querySelectorAll("div p")).toHaveLength(4);
+    expect(el.querySelector("button").style.display).toBe("none");
+    expect(el.querySelector("div").firstChild.textContent).toBe("new");
+  });
+
+  // it("count paragraphs equal 5", () => {
+  //   const el = document.createElement("div");
+  //   addPararaph(el);
+
+  //   for (let i = 0; i < 6; i++) {
+  //     el.querySelector("input").value = "new";
+  //     el.querySelector("button").click();
+  //   }
+  //   expect(el.querySelectorAll("div p")).toHaveLength(5);
+  // });
 });
