@@ -1,21 +1,24 @@
 const elInput = document.querySelector(".inputText");
 const button = document.querySelector("#button");
-let newText = "";
 
-button.hidden = true;
-elInput.oninput = function () {
-  newText = elInput.value;
-  button.hidden = false;
-};
+// button.hidden = true;
+elInput.addEventListener("input", function () {
+  button.style.display = "inline-block";
+  // document.addEventListener("keyup", (event) => {
+  //   if (event.code === "Enter") {
+  //     buttonClick();
+  //   }
+  // });
+});
 
 function buttonClick() {
   const divBox = document.querySelector(".text");
   if (divBox.childElementCount === 5) {
     divBox.removeChild(document.querySelector(".text :last-Child"));
   }
-  addElement(newText);
+  addElement(elInput.value);
   clearInput();
-  button.hidden = true;
+  button.style.display = "none";
 }
 
 function addElement(text) {
