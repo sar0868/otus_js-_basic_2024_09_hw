@@ -23,13 +23,13 @@ export function addParagraph(el) {
     btn.style.display = "inline-block";
   };
 
-  addElem = (text) => {
+  const addElem = (text) => {
     const newEl = document.createElement("p");
     newEl.innerHTML = text;
     el.querySelector("div").prepend(newEl);
   };
 
-  checkCountElem = () => {
+  const checkCountElem = () => {
     const elements = el.querySelectorAll("div p");
     for (const [k, v] of elements.entries()) {
       if (k >= 5) {
@@ -38,3 +38,4 @@ export function addParagraph(el) {
     }
   };
 }
+export default addParagraph;

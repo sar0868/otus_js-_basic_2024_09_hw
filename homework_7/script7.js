@@ -1,3 +1,6 @@
-import { addParagraph } from "./hw7";
+import addParagraph from "./hw7.js";
 
-addParagraph(document.querySelector("body"));
+const newDiv = document.createElement("div");
+document.body.appendChild(newDiv);
+const el = document.querySelector("div");
+addParagraph(el);
