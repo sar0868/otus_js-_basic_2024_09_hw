@@ -1,4 +1,4 @@
-export function addPararaph(el) {
+export function addParagraph(el) {
   el.innerHTML = `
         <input> 
         <button style='display: none'>add paragraph</button>

@@ -1,3 +1,3 @@
-import { addPararaph } from "./hw7";
+import { addParagraph } from "./hw7";
 
-alert("hh");
+addParagraph(document.querySelector("body"));
