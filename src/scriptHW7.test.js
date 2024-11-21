@@ -1,9 +1,3 @@
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const dom = new JSDOM();
-global.document = dom.window.document;
-global.window = dom.window;
-
 import { addParagraph } from "./scriptHW7";
 import { beforeEach } from "@jest/globals";
 
