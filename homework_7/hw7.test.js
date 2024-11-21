@@ -47,14 +47,14 @@ describe("hw7", () => {
     expect(el.querySelector("div").firstChild.textContent).toBe("new");
   });
 
-  // it("count paragraphs equal 5", () => {
-  //   const el = document.createElement("div");
-  //   addPararaph(el);
+  it("count paragraphs equal 5", () => {
+    const el = document.createElement("div");
+    addPararaph(el);
 
-  //   for (let i = 0; i < 6; i++) {
-  //     el.querySelector("input").value = "new";
-  //     el.querySelector("button").click();
-  //   }
-  //   expect(el.querySelectorAll("div p")).toHaveLength(5);
-  // });
+    for (let i = 0; i < 6; i++) {
+      el.querySelector("input").value = "new";
+      el.querySelector("button").click();
+    }
+    expect(el.querySelectorAll("div p")).toHaveLength(5);
+  });
 });

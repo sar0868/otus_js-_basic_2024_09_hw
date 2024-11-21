@@ -15,7 +15,7 @@ export function addPararaph(el) {
     let text = inp.value;
     inp.value = "";
     addElem(text);
-
+    checkCountElem();
     btn.style.display = "none";
   });
 
@@ -29,10 +29,12 @@ export function addPararaph(el) {
     el.querySelector("div").prepend(newEl);
   };
 
-  // checkCountElem = () => {
-  //   const elements = el.querySelectorAll("div p");
-  //   while (elements.length > 5) {
-  //     elements.pul;
-  //   }
-  // };
+  checkCountElem = () => {
+    const elements = el.querySelectorAll("div p");
+    for (const [k, v] of elements.entries()) {
+      if (k >= 5) {
+        el.querySelector("div").removeChild(v);
+      }
+    }
+  };
 }
