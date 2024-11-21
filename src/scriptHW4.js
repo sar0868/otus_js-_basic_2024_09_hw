@@ -1,12 +1,12 @@
-const { number } = require("yargs");
+// const { number } = require("yargs");
 
 const user = {
   name: "John",
 };
 
-function inputAge() {
-  return +prompt("Введите возраст: ");
-}
+// function inputAge() {
+//   return +prompt("Введите возраст: ");
+// }
 const num = 56;
 user.age = num;
 const admin = Object.assign({}, user, { role: "admin" });

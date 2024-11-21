@@ -4,7 +4,9 @@
   "description": "preparatory_course",
   "main": "index.html",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "repository": {
     "type": "git",

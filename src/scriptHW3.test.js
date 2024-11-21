@@ -13,7 +13,7 @@ describe("tests hw 03", () => {
       expect(result).toBe(expected);
     });
     it("should 1 call console.log", () => {
-      const result = sum();
+      sum();
 
       expect(logSpy).toHaveBeenCalled();
     });
@@ -21,19 +21,22 @@ describe("tests hw 03", () => {
 
   describe("7 multiplication table", () => {
     it("should input equal expected", () => {
-      const expected = `7 x 1 = 7
-      7 x 2 = 14
-      7 x 3 = 21
-      7 x 4 = 28
-      7 x 5 = 35
-      7 x 6 = 42
-      7 x 7 = 49
-      7 x 8 = 56
-      7 x 9 = 63`;
+      const expected =
+        "7 x 1 = 7\n" +
+        "7 x 2 = 14\n" +
+        "7 x 3 = 21\n" +
+        "7 x 4 = 28\n" +
+        "7 x 5 = 35\n" +
+        "7 x 6 = 42\n" +
+        "7 x 7 = 49\n" +
+        "7 x 8 = 56\n" +
+        "7 x 9 = 63\n";
       const result = mult7();
+
+      expect(result).toEqual(expected);
     });
     it("should 9 call console.log", () => {
-      const result = mult7();
+      mult7();
 
       expect(logSpy).toHaveBeenCalledTimes(9);
     });

@@ -1,5 +1,5 @@
 //1
-function checkRightTriangle(args) {
+export function checkRightTriangle(args) {
   if (args.length != 3) {
     return false;
   }
@@ -21,18 +21,18 @@ function sidesTriangle(n1, n2, n3) {
   return [n3, n1, n2];
 }
 
-function RightTriangle() {
-  const input1 = prompt("Input sides a triangle (a,b,c).");
-  const sides = input1.split(",").map(Number);
-  if (checkRightTriangle(sides)) {
-    console.log("Введенный стороны составляют прямоуольный треугольник");
-  } else {
-    console.log("Не прямоугольный треугольник");
-  }
-}
+// function RightTriangle() {
+//   const input1 = prompt("Input sides a triangle (a,b,c).");
+//   const sides = input1.split(",").map(Number);
+//   if (checkRightTriangle(sides)) {
+//     console.log("Введенный стороны составляют прямоуольный треугольник");
+//   } else {
+//     console.log("Не прямоугольный треугольник");
+//   }
+// }
 
 //2
-function getCircumferenceAndAreaCircle(r) {
+export function getCircumferenceAndAreaCircle(r) {
   // const r = +prompt("Input radius.");
   const areaCircle = (Math.PI * Math.pow(r, 2)).toFixed(2);
   const circumference = (2 * Math.PI * r).toFixed(2);
@@ -43,20 +43,20 @@ function getCircumferenceAndAreaCircle(r) {
 }
 
 //3
-function calcEquation() {
-  const input3 = prompt("Input a,b,c.");
-  const [a, b, c] = input3.split(",").map(Number);
-  const roots = rootsEquation(a, b, c);
-  if (roots === undefined) {
-    console.log("Нет решений");
-  } else if (typeof roots === "number") {
-    console.log("Имеется одно решение: ", roots);
-  } else {
-    console.log(`Решения: ${roots[0]}, ${roots[1]}`);
-  }
-}
+// function calcEquation() {
+//   const input3 = prompt("Input a,b,c.");
+//   const [a, b, c] = input3.split(",").map(Number);
+//   const roots = rootsEquation(a, b, c);
+//   if (roots === undefined) {
+//     console.log("Нет решений");
+//   } else if (typeof roots === "number") {
+//     console.log("Имеется одно решение: ", roots);
+//   } else {
+//     console.log(`Решения: ${roots[0]}, ${roots[1]}`);
+//   }
+// }
 
-function rootsEquation(a, b, c) {
+export function rootsEquation(a, b, c) {
   const D = Math.pow(b, 2) - 4 * a * c;
   if (D < 0) {
     return undefined;
@@ -70,8 +70,8 @@ function rootsEquation(a, b, c) {
   }
 }
 
-module.exports = {
-  checkRightTriangle,
-  getCircumferenceAndAreaCircle,
-  rootsEquation,
-};
+// module.exports = {
+//   checkRightTriangle,
+//   getCircumferenceAndAreaCircle,
+//   rootsEquation,
+// };

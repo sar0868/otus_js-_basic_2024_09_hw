@@ -32,7 +32,6 @@ describe("tests hw 8", () => {
       { date1: "01.01.2024", date2: "02.01.2024", expected: "01.01.2024" },
       { date1: "03.01.2024", date2: "02.01.2024", expected: "02.01.2024" },
       { date1: "01.01.2024", date2: "01.01.2024", expected: "01.01.2024" },
-      ,
     ])(
       "should younger birth date $date1 and $date2: $expected",
       ({ date1, date2, expected }) => {
