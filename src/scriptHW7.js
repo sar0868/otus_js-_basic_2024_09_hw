@@ -12,7 +12,7 @@ export function addParagraph(el) {
   const btn = el.querySelector("button");
 
   btn.addEventListener("click", () => {
-    let text = inp.value;
+    const text = inp.value;
     inp.value = "";
     addElem(text);
     checkCountElem();

@@ -4,7 +4,7 @@ for (let i = 0; i < 10; i++) {
 }
 console.log("Массив 10 элементов: ", arr);
 
-let result = arr.reduce((acc, el) => acc + el, 0);
+const result = arr.reduce((acc, el) => acc + el, 0);
 console.log(`Сумма массива [${arr}] = ${result}`);
 const arrDouble = arr.map((el) => 2 * el);
 console.log("Массив удвоeнных значений: ", arrDouble);

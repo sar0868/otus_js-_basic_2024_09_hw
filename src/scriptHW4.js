@@ -7,12 +7,12 @@ const user = {
 function inputAge() {
   return +prompt("Введите возраст: ");
 }
-let num = 56;
+const num = 56;
 user.age = num;
 const admin = Object.assign({}, user, { role: "admin" });
 console.log(user);
 console.log(admin);
-let { name, age, role } = admin;
+const { name, age, role } = admin;
 console.log(`name: ${name}`);
 console.log(`age: ${age}`);
 console.log(`role: ${role}`);

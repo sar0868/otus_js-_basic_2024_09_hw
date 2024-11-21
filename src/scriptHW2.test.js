@@ -42,7 +42,7 @@ describe("tests hw2", () => {
   });
 
   describe(`check if a circle ($circle) 
-    fits into a square ($square): $expected `, () => {
+    fits into a square ($square): $expected`, () => {
     it.each([
       { circle: 1, square: 2, expected: true },
       { circle: 2, square: 2, expected: true },
