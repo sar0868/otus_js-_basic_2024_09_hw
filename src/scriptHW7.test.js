@@ -4,7 +4,7 @@ const dom = new JSDOM();
 global.document = dom.window.document;
 global.window = dom.window;
 
-import { addParagraph } from "./hw7";
+import { addParagraph } from "./scriptHW7";
 import { beforeEach } from "@jest/globals";
 
 const el = document.createElement("div");
