@@ -17,4 +17,6 @@ console.log(`name: ${name}`);
 console.log(`age: ${age}`);
 console.log(`role: ${role}`);
 
+/* global module */
+
 module.exports = { user, admin, name, age, role };
