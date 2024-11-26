@@ -1,9 +1,21 @@
-import { arr, arrDouble, max, min } from "./scriptHW5";
+import { arr, sumElArray, arrDouble, max, min } from "./scriptHW5";
 
 describe("tests hw 5", () => {
   it("should array (arr) integer this length = 10", () => {
     expect(arr).toHaveLength(10);
   });
+
+  it.each([
+    {array: [1, 2, 3], expected: 6},
+    {array: [1, -1, 1], expected: 1},
+    {array: [], expected: 0},
+  ])("should for $array summa elemens equals: $expected",
+    ({array, expected}) =>{
+      const result = sumElArray(array);
+
+      expect(result).toBe(expected);
+    }
+  );
 
   it("should array (arrDouble) array elements are twice as big as arr", () => {
     const expectedEl1 = arr[0] * 2;
