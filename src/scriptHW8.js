@@ -1,11 +1,11 @@
 // 1
-function createDate(inputStr) {
+export function createDate(inputStr) {
   const [day, month, year] = inputStr.split(".");
   const date = new Date(`${year}-${month}-${day}`);
   return date;
 }
 
-function week(day) {
+export function week(day) {
   const week = [
     "Воскресенье",
     "Понедельник",
@@ -14,7 +14,6 @@ function week(day) {
     "Четверг",
     "Пятница",
     "Суббота",
-    ,
   ];
   return week[day];
 }
@@ -27,7 +26,7 @@ const inpDate = createDate(inputDate());
 console.log(inputDate, week(inpDate.getDay()));
 
 // 2
-function calcMinutes(now) {
+export function calcMinutes(now) {
   const hours = now.getHours();
   const minutes = now.getMinutes();
   return hours * 60 + minutes;
@@ -40,12 +39,12 @@ console.log(`С начала сегодняшнего дня прошло ${calc
 //   name:
 // }
 
-const birthdayUser1 = "08.11.1968";
+// const birthdayUser1 = "08.11.1968";
 // const bdUser1 = createDate(birthdayUser1);
-const birthdayUser2 = "09.11.1968";
+// const birthdayUser2 = "09.11.1968";
 // const bdUser2 = createDate(birthdayUser2);
 
-function getYounger(birthdayUser1, birthdayUser2) {
+export function getYounger(birthdayUser1, birthdayUser2) {
   const bdUser1 = createDate(birthdayUser1);
   const bdUser2 = createDate(birthdayUser2);
   if (bdUser1 < bdUser2) {
@@ -58,5 +57,3 @@ function getYounger(birthdayUser1, birthdayUser2) {
   console.log("user1 и user2 родились в один день");
   return birthdayUser1;
 }
-
-module.exports = { createDate, week, getYounger, calcMinutes };

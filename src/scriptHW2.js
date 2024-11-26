@@ -10,15 +10,15 @@ export function max(a, b) {
   return b;
 }
 
-function inputDateTask1() {
-  const a = +prompt("Input number a: ");
-  const b = +prompt("Input number b: ");
-  return [a, b];
-}
+// function inputDateTask1() {
+//   const a = +prompt("Input number a: ");
+//   const b = +prompt("Input number b: ");
+//   return [a, b];
+// }
 
-function inputNumberMonth() {
-  return prompt("Введите число от 1 до 12 включительно: ");
-}
+// function inputNumberMonth() {
+//   return prompt("Введите число от 1 до 12 включительно: ");
+// }
 
 export function getMonth(month) {
   let monthStr = "";
@@ -67,12 +67,12 @@ export function getMonth(month) {
   return monthStr;
 }
 
-function inputAreasCircleSquare() {
-  return {
-    circle: Number(prompt("Введите площадь круга: ")),
-    square: Number(prompt("Введите площадь квадрата: ")),
-  };
-}
+// function inputAreasCircleSquare() {
+//   return {
+//     circle: Number(prompt("Введите площадь круга: ")),
+//     square: Number(prompt("Введите площадь квадрата: ")),
+//   };
+// }
 
 export function isCircleIntoSquare(circle, square) {
   if (circle <= square) {
@@ -81,8 +81,8 @@ export function isCircleIntoSquare(circle, square) {
   return false;
 }
 
-function showCheckAreasCircleSquare(check) {
-  return check
-    ? "Круг поместиться в квадрат."
-    : "Круг не поместиться в квадрат.";
-}
+// function showCheckAreasCircleSquare(check) {
+//   return check
+//     ? "Круг поместиться в квадрат."
+//     : "Круг не поместиться в квадрат.";
+// }

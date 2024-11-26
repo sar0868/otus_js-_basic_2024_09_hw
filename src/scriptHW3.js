@@ -16,9 +16,9 @@ export function mult7() {
   return result;
 }
 
-function inputN() {
-  return Number(prompt("Введите число N: "));
-}
+// function inputN() {
+//   return Number(prompt("Введите число N: "));
+// }
 
 export function mean(n) {
   let summa = 0;

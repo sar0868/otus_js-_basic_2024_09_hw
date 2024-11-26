@@ -26,6 +26,8 @@ describe("tests hew 10", () => {
       { inp: "example@exa_mpl.com", expected: false },
       { inp: "example@exampl.1om", expected: false },
       { inp: "name@exampl.caaaaa", expected: false },
+      { inp: "цname@exampl.com", expected: false },
+      { inp: "namщe@exampl.com", expected: false },
     ])("should for input=$inp is a email: $expected", ({ inp, expected }) => {
       const result = isEmail(inp);
 
