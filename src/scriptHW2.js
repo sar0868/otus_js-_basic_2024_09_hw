@@ -67,22 +67,9 @@ export function getMonth(month) {
   return monthStr;
 }
 
-// function inputAreasCircleSquare() {
-//   return {
-//     circle: Number(prompt("Введите площадь круга: ")),
-//     square: Number(prompt("Введите площадь квадрата: ")),
-//   };
-// }
-
 export function isCircleIntoSquare(circle, square) {
-  if (circle <= square) {
+  if((square - circle) >= (Math.PI / 4)) {
     return true;
   }
   return false;
 }
-
-// function showCheckAreasCircleSquare(check) {
-//   return check
-//     ? "Круг поместиться в квадрат."
-//     : "Круг не поместиться в квадрат.";
-// }

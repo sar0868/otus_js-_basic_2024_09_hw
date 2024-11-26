@@ -1,6 +1,6 @@
 export function sum() {
-  let sum = 0;
-  for (let i = 50; i <= 100; i++) {
+  let sum = 50;
+  for (let i = 51; i <= 100; i++) {
     sum += i;
   }
   console.log("Сумма целых цисел от 50 до 100 равна " + sum);
@@ -23,11 +23,9 @@ export function mult7() {
 export function mean(n) {
   let summa = 0;
   let count = 0;
-  for (let i = 1; i <= n; i++) {
-    if (i % 2 != 0) {
+  for (let i = 1; i <= n; i += 2) {
       summa += i;
       count++;
-    }
   }
   const avg = summa / count;
   console.log(

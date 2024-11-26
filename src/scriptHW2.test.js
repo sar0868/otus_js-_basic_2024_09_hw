@@ -45,7 +45,7 @@ describe("tests hw2", () => {
     fits into a square ($square): $expected`, () => {
     it.each([
       { circle: 1, square: 2, expected: true },
-      { circle: 2, square: 2, expected: true },
+      { circle: 2, square: 2, expected: false },
       { circle: 3, square: 2, expected: false },
     ])(
       "should circle $circle into square $square: $expected",
