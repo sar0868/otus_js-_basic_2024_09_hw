@@ -1,6 +1,5 @@
 export function diff(num1, num2) {
-  const result = num1 - num2;
-  return result > 0 ? result : result * -1;
+  return Math.abs(num1 -num2);
 }
 
 export function isWord(text) {
@@ -8,7 +7,9 @@ export function isWord(text) {
     return false;
   }
   const regexp = /\W+/;
-  const arr = text.split(regexp);
+  const arr = text.split(regexp).map((el) => {
+    return el.trim();
+  }).filter((el) => el.length != 0);
   return arr.length === 1;
 }
 

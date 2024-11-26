@@ -19,6 +19,7 @@ describe("tests he 6", () => {
   describe("test isWord", () => {
     it.each([
       { text: "hello", expected: true },
+      { text: " Hello", expected: true },
       { text: "hello world", expected: false },
       { text: "h.ll", expected: false },
       { text: "", expected: false },
