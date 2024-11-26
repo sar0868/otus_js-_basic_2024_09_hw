@@ -16,7 +16,7 @@ describe("tests hw01", () => {
         const result = sum(inputA, inputB);
 
         expect(result).toBe(expected);
-      }
+      },
     );
 
     it("should call console.log", () => {
@@ -38,7 +38,7 @@ describe("tests hw01", () => {
         const result = mult(inputA, inputB);
 
         expect(result).toBe(expected);
-      }
+      },
     );
 
     it("should call console.log", () => {
@@ -60,7 +60,7 @@ describe("tests hw01", () => {
         const result = totalChar(str1, str2);
 
         expect(result).toBe(expected);
-      }
+      },
     );
     it("should call console.log", () => {
       totalChar("a", "");
@@ -80,7 +80,7 @@ describe("tests hw01", () => {
         const result = sumNumbers(number);
 
         expect(result).toBe(expected);
-      }
+      },
     );
     it("should call console.log", () => {
       sumNumbers(123);

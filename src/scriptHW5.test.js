@@ -28,6 +28,6 @@ describe("tests hw 5", () => {
 
       expect(minimum).toBe(minEl);
       expect(maximum).toBe(maxEl);
-    }
+    },
   );
 });

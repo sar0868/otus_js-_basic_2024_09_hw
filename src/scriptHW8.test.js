@@ -38,7 +38,7 @@ describe("tests hw 8", () => {
         const result = getYounger(date1, date2);
 
         expect(result).toBe(expected);
-      }
+      },
     );
   });
 });

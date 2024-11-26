@@ -14,7 +14,7 @@ describe("tests hw2", () => {
         const result = max(num1, num2);
 
         expect(result).toBe(expected);
-      }
+      },
     );
     it("should call console.log", () => {
       max(1, 2);
@@ -53,7 +53,7 @@ describe("tests hw2", () => {
         const result = isCircleIntoSquare(circle, square);
 
         expect(result).toBe(expected);
-      }
+      },
     );
   });
 });

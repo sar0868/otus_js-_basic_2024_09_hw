@@ -28,7 +28,7 @@ export function isEmail(email) {
 export function isNumberPhone(phone) {
   const reg3 = /(8|\+7)\([1-9]\d{2}\)[1-9]\d{2}-\d{2}-\d{2}$/;
   console.log(
-    `${phone} - ${reg3.test(phone) ? "номер телефона" : "не номер телефона"}`
+    `${phone} - ${reg3.test(phone) ? "номер телефона" : "не номер телефона"}`,
   );
   return reg3.test(phone);
 }

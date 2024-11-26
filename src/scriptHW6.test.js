@@ -12,7 +12,7 @@ describe("tests he 6", () => {
         const result = diff(num1, num2);
 
         expect(result).toBe(expected);
-      }
+      },
     );
   });
 
@@ -28,7 +28,7 @@ describe("tests he 6", () => {
         const result = isWord(text);
 
         expect(result).toBe(expected);
-      }
+      },
     );
   });
 
@@ -45,7 +45,7 @@ describe("tests he 6", () => {
         const result = pow(a, x);
 
         expect(result).toBe(expected);
-      }
+      },
     );
   });
 });

@@ -11,7 +11,7 @@ export function mult(a, b) {
 export function totalChar(str1, str2) {
   const sumLengthTexts = str1.length + str2.length;
   console.log(
-    `Количество символов в строках ${str1} и ${str2} = ${sumLengthTexts}`
+    `Количество символов в строках ${str1} и ${str2} = ${sumLengthTexts}`,
   );
   return sumLengthTexts;
 }

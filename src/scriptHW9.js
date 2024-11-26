@@ -37,7 +37,7 @@ export function getCircumferenceAndAreaCircle(r) {
   const areaCircle = (Math.PI * Math.pow(r, 2)).toFixed(2);
   const circumference = (2 * Math.PI * r).toFixed(2);
   console.log(
-    `Площадь круга: ${areaCircle},\nдлина окружности: ${circumference}`
+    `Площадь круга: ${areaCircle},\nдлина окружности: ${circumference}`,
   );
   return { circumference: circumference, area: areaCircle };
 }
