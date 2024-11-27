@@ -24,8 +24,8 @@ export function mean(n) {
   let summa = 0;
   let count = 0;
   for (let i = 1; i <= n; i += 2) {
-      summa += i;
-      count++;
+    summa += i;
+    count++;
   }
   const avg = summa / count;
   console.log(

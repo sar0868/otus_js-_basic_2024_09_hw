@@ -68,8 +68,5 @@ export function getMonth(month) {
 }
 
 export function isCircleIntoSquare(circle, square) {
-  if((square - circle) >= (Math.PI / 4)) {
-    return true;
-  }
-  return false;
+  return square - circle >= Math.PI / 4;
 }

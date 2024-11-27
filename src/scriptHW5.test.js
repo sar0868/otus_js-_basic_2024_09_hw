@@ -1,32 +1,35 @@
-import { arr, sumElArray, arrDouble, max, min } from "./scriptHW5";
+import { createArray, sumElArray, arrDouble, max, min } from "./scriptHW5";
 
 describe("tests hw 5", () => {
   it("should array (arr) integer this length = 10", () => {
-    expect(arr).toHaveLength(10);
+    expect(createArray()).toHaveLength(10);
   });
 
   it.each([
-    {array: [1, 2, 3], expected: 6},
-    {array: [1, -1, 1], expected: 1},
-    {array: [], expected: 0},
-  ])("should for $array summa elemens equals: $expected",
-    ({array, expected}) =>{
+    { array: [1, 2, 3], expected: 6 },
+    { array: [1, -1, 1], expected: 1 },
+    { array: [], expected: 0 },
+  ])(
+    "should for $array summa elemens equals: $expected",
+    ({ array, expected }) => {
       const result = sumElArray(array);
 
       expect(result).toBe(expected);
-    }
+    },
   );
 
-  it("should array (arrDouble) array elements are twice as big as arr", () => {
-    const expectedEl1 = arr[0] * 2;
-    const expectedEl3 = arr[2] * 2;
-    const expectedEl10 = arr[9] * 2;
+  it.each([
+    { array: [1, 2], expected: [2, 4] },
+    { array: [0, 1, 0], expected: [0, 2, 0] },
+    { array: [], expected: [] },
+  ])(
+    "should arrDouble($array) expected elements are twice as big as arr: $expected",
+    ({ array, expected }) => {
+      const result = arrDouble(array);
 
-    expect(arrDouble).toHaveLength(10);
-    expect(arrDouble[0]).toBe(expectedEl1);
-    expect(arrDouble[2]).toBe(expectedEl3);
-    expect(arrDouble[9]).toBe(expectedEl10);
-  });
+      expect(result).toEqual(expected);
+    },
+  );
   it.each([
     { array: [1, 2, 3], minEl: 1, maxEl: 3 },
     { array: [4, 2, 3], minEl: 2, maxEl: 4 },
