@@ -9,13 +9,10 @@ describe("tests hw 03", () => {
       const expected = 3825;
 
       const result = sum();
+      const inpResult = `Сумма целых цисел от 50 до 100 равна ${expected}`;
 
       expect(result).toBe(expected);
-    });
-    it("should 1 call console.log", () => {
-      sum();
-
-      expect(logSpy).toHaveBeenCalled();
+      expect(logSpy).toHaveBeenCalledWith(inpResult);
     });
   });
 
@@ -50,13 +47,10 @@ describe("tests hw 03", () => {
       { n: -3, expected: NaN },
     ])("should average odd numbers 1..$n = $expected", ({ n, expected }) => {
       const result = mean(n);
+      const inpResult = `Среднее арифиметическое нечетных чисел от 1 до ${n} равно ${expected}`;
 
       expect(result).toBe(expected);
-    });
-    it("should 1 call console.log", () => {
-      mean(1);
-
-      expect(logSpy).toHaveBeenCalled();
+      expect(logSpy).toHaveBeenCalledWith(inpResult);
     });
   });
 });

@@ -16,14 +16,9 @@ describe("tests hw01", () => {
         const result = sum(inputA, inputB);
 
         expect(result).toBe(expected);
-      },
+        expect(logSpy).toHaveBeenCalledWith(expected);
+      }
     );
-
-    it("should call console.log", () => {
-      sum(1, 0);
-
-      expect(logSpy).toHaveBeenCalled();
-    });
   });
 
   describe("tests mult numbers", () => {
@@ -38,14 +33,9 @@ describe("tests hw01", () => {
         const result = mult(inputA, inputB);
 
         expect(result).toBe(expected);
-      },
+        expect(logSpy).toHaveBeenCalledWith(expected);
+      }
     );
-
-    it("should call console.log", () => {
-      mult(1, 0);
-
-      expect(logSpy).toHaveBeenCalled();
-    });
   });
 
   describe("tests totalChar", () => {
@@ -58,15 +48,12 @@ describe("tests hw01", () => {
       "should summa total char: '$str1', '$str2': $expected",
       ({ str1, str2, expected }) => {
         const result = totalChar(str1, str2);
+        const inputConsole = `Количество символов в строках ${str1} и ${str2} = ${expected}`;
 
         expect(result).toBe(expected);
-      },
+        expect(logSpy).toHaveBeenCalledWith(inputConsole);
+      }
     );
-    it("should call console.log", () => {
-      totalChar("a", "");
-
-      expect(logSpy).toHaveBeenCalled();
-    });
   });
 
   describe("tests sumNumbers", () => {
@@ -78,14 +65,11 @@ describe("tests hw01", () => {
       "should summa numbers for $number =  $expected",
       ({ number, expected }) => {
         const result = sumNumbers(number);
+        const inputConsole = `Сумма цифр введеного числа ${number} равна ${expected}`;
 
         expect(result).toBe(expected);
-      },
+        expect(logSpy).toHaveBeenCalledWith(inputConsole);
+      }
     );
-    it("should call console.log", () => {
-      sumNumbers(123);
-
-      expect(logSpy).toHaveBeenCalled();
-    });
   });
 });

@@ -9,16 +9,20 @@ export function createArray() {
 const arr = createArray();
 console.log("Массив 10 элементов: ", arr);
 
-export const sumElArray = (array) => array.reduce((acc, el) => acc + el, 0);
-console.log(`Сумма массива [${arr}] = ${sumElArray(arr)}`);
+export const sumElArray = (array) => {
+  const sum = array.reduce((acc, el) => acc + el, 0);
+  console.log(`Сумма массива ${array} = ${sum}`);
+};
+// console.log(`Сумма массива [${arr}] = ${sumElArray(arr)}`);
 
 export function arrDouble(array) {
   return array.map((el) => 2 * el);
 }
 console.log("Массив удвоeнных значений: ", arrDouble(arr));
 
-console.log(`Минимальное значение массива [${arr}] равно ${min(arr)}`);
-console.log(`Максимальное значение массива [${arr}] равно ${max(arr)}`);
+export function minAndMaxElements(arr) {
+  console.log(`Для массива [${arr}] min=${min(arr)}, max=${max(arr)}`);
+}
 
 export function max(array) {
   let max = array[0];

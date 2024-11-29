@@ -29,7 +29,7 @@ export function mean(n) {
   }
   const avg = summa / count;
   console.log(
-    "Среднее арифиметическое нечетных чисел от 1 до " + n + " равно " + avg,
+    "Среднее арифиметическое нечетных чисел от 1 до " + n + " равно " + avg
   );
   return avg;
 }
