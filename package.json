@@ -1,0 +1,42 @@
+{
+  "name": "otus_js_basic_2024_09_hw",
+  "version": "1.0.0",
+  "description": "preparatory_course",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky",
+    "prettier": "prettier -c -w src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sar0868/otus_js_basic_2024_09_hw.git"
+  },
+  "author": "Safarov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sar0868/otus_js_basic_2024_09_hw/issues"
+  },
+  "homepage": "https://github.com/sar0868/otus_js_basic_2024_09_hw#readme",
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@eslint/js": "^9.15.0",
+    "@types/jest": "^29.5.14",
+    "babel-jest": "^29.7.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "globals": "^15.12.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  }
+}
